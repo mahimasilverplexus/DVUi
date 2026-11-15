@@ -191,10 +191,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const brandLogos = {
+    'DYSON': 'images/brands/dyson.svg',
+    'MIELE': 'images/brands/miele.svg',
+    'SEBO': 'images/brands/sebo.png',
+    'DUOVAC': 'images/brands/duovac.png',
+    'CYCLOVAC': 'images/brands/cyclovac.png',
+    'NILFISK': 'images/brands/nilfisk.svg',
+    'KARCHER': 'images/brands/karcher.png',
+    'NUMATIC': 'images/brands/numatic.png',
+    'PROTEAM': 'images/brands/proteam.png',
+    'TASKI': 'images/brands/taski.png',
+    'CANAVAC': 'images/brands/duovac.png',
+    'HIDE-A-HOSE': 'images/brands/cyclovac.png',
+    'NOBLES': 'images/brands/nilfisk.svg'
+  };
+
   function renderFavourites(category) {
     if (!carousel) return;
     const items = productsData[category] || productsData.residential;
-    carousel.innerHTML = items.map(p => `
+    carousel.innerHTML = items.map(p => {
+      const brandKey = (p.brand || '').toUpperCase().trim();
+      const logoSrc = brandLogos[brandKey];
+      const brandMarkup = logoSrc
+        ? `<img src="${logoSrc}" alt="${p.brand}" class="product-card__brand-logo" title="${p.brand}">`
+        : p.brand;
+
+      return `
       <article class="product-card" data-category="${category}">
         <div class="product-card__badges">
           <span class="stock-badge ${p.badge === 'Popular' ? 'hot' : ''}">${p.badge}</span>
@@ -209,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="product-card__body">
           <div class="product-card__meta">
-            <span class="product-card__brand">${p.brand}</span>
+            <span class="product-card__brand">${brandMarkup}</span>
             <div class="product-card__rating">
               <span class="stars">${p.rating}</span>
               <span class="count">${p.reviews}</span>
@@ -229,7 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </button>
         </div>
       </article>
-    `).join('');
+    `;
+    }).join('');
 
     // Reattach wishlist click events to newly created cards
     carousel.querySelectorAll('.wishlist-btn').forEach(btn => {
@@ -360,7 +384,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Topbar Offer Carousel Autoplay
+  startOfferRotation();
 });
+
+// Topbar Offer Carousel Controls
+let currentOfferIdx = 0;
+let offerInterval = null;
+
+function renderOfferSlide(idx) {
+  const slides = document.querySelectorAll('.offer-slide');
+  if (!slides || slides.length === 0) return;
+  if (idx < 0) idx = slides.length - 1;
+  if (idx >= slides.length) idx = 0;
+  currentOfferIdx = idx;
+
+  slides.forEach((slide, i) => {
+    if (i === currentOfferIdx) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
+
+window.nextOffer = function() {
+  renderOfferSlide(currentOfferIdx + 1);
+  startOfferRotation();
+};
+
+window.prevOffer = function() {
+  renderOfferSlide(currentOfferIdx - 1);
+  startOfferRotation();
+};
+
+function startOfferRotation() {
+  if (offerInterval) clearInterval(offerInterval);
+  offerInterval = setInterval(() => {
+    renderOfferSlide(currentOfferIdx + 1);
+  }, 4500);
+}
 
 // Commercial Janitorial Quote Submission Feedback
 function handleJanitorialSubmit(form) {

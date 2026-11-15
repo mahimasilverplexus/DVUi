@@ -23,7 +23,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'Cordless',
       snippet: 'Up to 40 mins runtime with de-tangling Motorbar™ cleaner head.',
-      img: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=400&q=80'
+      img: 'images/collections/cordless-stick.png',
+      url: 'https://dynamicvac.com/collections/stick-vacuum-cleaners'
     },
     {
       id: 'miele-guard-s1',
@@ -36,7 +37,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'German Made',
       snippet: 'High suction 1200W motor with 6-stage rotary selector and AirClean filter.',
-      img: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=80'
+      img: 'images/collections/premium-miele.png',
+      url: 'https://dynamicvac.com/collections/miele'
     },
     {
       id: 'dyson-v15',
@@ -49,7 +51,8 @@ const catalogData = {
       badge: 'Popular',
       techChip: 'Laser Detect',
       snippet: 'Piezo sensor counts particle sizes with Fluffy Optic™ illumination.',
-      img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80'
+      img: 'images/collections/cordless-stick.png',
+      url: 'https://dynamicvac.com/collections/stick-vacuum-cleaners'
     },
     {
       id: 'sebo-airbelt-e3',
@@ -62,7 +65,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: '10-Yr Warranty',
       snippet: 'Commercial durability for the home with ET-1 electric powerhead for carpets.',
-      img: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=400&q=80'
+      img: 'images/collections/canister-vacuums.png',
+      url: 'https://dynamicvac.com/collections/canister-vacuum-cleaners'
     }
   ],
   central: [
@@ -77,7 +81,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'Alloy Tank',
       snippet: '750 AirWatts Canadian crafted motor with anti-microbial SILPURE filtration.',
-      img: 'images/collections/duovac-systems.png'
+      img: 'images/collections/duovac-systems.png',
+      url: 'https://dynamicvac.com/collections/duovac'
     },
     {
       id: 'canavac-ls750',
@@ -90,7 +95,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'Tangential Bypass',
       snippet: 'Heavy duty all-steel construction with high-efficiency sound-baffled muffler.',
-      img: 'images/collections/central-packages.png'
+      img: 'images/collections/central-packages.png',
+      url: 'https://dynamicvac.com/collections/central-vacuum-systems'
     },
     {
       id: 'hide-a-hose-50ft',
@@ -103,7 +109,8 @@ const catalogData = {
       badge: 'Best Seller',
       techChip: 'Self-Retracting',
       snippet: 'Disappears into the wall piping in seconds. No tangled hose in your hallway.',
-      img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80'
+      img: 'images/collections/central-packages.png',
+      url: 'https://dynamicvac.com/collections/central-vacuum-systems'
     },
     {
       id: 'cyclovac-h725',
@@ -116,7 +123,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'Hybrid HEPA',
       snippet: 'Operates with or without a disposable bag. Ideal for large multi-level homes.',
-      img: 'images/collections/duovac-systems.png'
+      img: 'images/collections/duovac-systems.png',
+      url: 'https://dynamicvac.com/collections/duovac'
     }
   ],
   commercial: [
@@ -131,7 +139,8 @@ const catalogData = {
       badge: 'Pro Grade',
       techChip: 'Four-Level HEPA',
       snippet: 'Ergonomic harness backpack cleaner designed for high-efficiency commercial janitorial work.',
-      img: 'images/collections/commercial-backpack.png'
+      img: 'images/collections/commercial-backpack.png',
+      url: 'https://dynamicvac.com/collections/commercial-backpack-vacuum-cleaners'
     },
     {
       id: 'numatic-henry-pro',
@@ -144,7 +153,8 @@ const catalogData = {
       badge: 'Top Choice',
       techChip: 'UK Made',
       snippet: 'Legendary reliability with TriTex filtration system and 10-metre rewind cable.',
-      img: 'images/collections/commercial-vacuums.png'
+      img: 'images/collections/commercial-vacuums.png',
+      url: 'https://dynamicvac.com/collections/commercial-vacuums'
     },
     {
       id: 'taski-aero8',
@@ -157,7 +167,8 @@ const catalogData = {
       badge: 'In Stock',
       techChip: 'Eco Button 53dB',
       snippet: 'Ultra-quiet whisper motor for daytime cleaning in medical clinics and corporate offices.',
-      img: 'images/collections/canister-vacuums.png'
+      img: 'images/collections/canister-vacuums.png',
+      url: 'https://dynamicvac.com/collections/commercial-vacuums'
     },
     {
       id: 'nobles-speed-scrub',
@@ -170,7 +181,8 @@ const catalogData = {
       badge: 'Commercial',
       techChip: 'Dual Disk',
       snippet: 'Industrial compact floor scrubber for tight retail aisles and auto shop floors.',
-      img: 'images/collections/auto-scrubbers.png'
+      img: 'images/collections/auto-scrubbers.png',
+      url: 'https://dynamicvac.com/collections/auto-scrubbers'
     }
   ]
 };
@@ -514,9 +526,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
           </svg>
         </button>
-        <div class="product-card__img-wrap">
-          <img src="${p.img}" alt="${p.title}" class="product-card__img">
-        </div>
+        <a href="${p.url || '#'}" target="_blank" rel="noopener noreferrer" class="product-card__img-wrap" aria-label="View ${p.title}">
+          <img src="${p.img}" alt="${p.title}" class="product-card__img" loading="lazy">
+        </a>
         <div class="product-card__body">
           <div class="product-card__meta">
             <span class="product-card__brand">${p.brand}</span>
@@ -525,7 +537,9 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="count">${p.reviews}</span>
             </div>
           </div>
-          <h3 class="product-card__title">${p.title}</h3>
+          <h3 class="product-card__title">
+            <a href="${p.url || '#'}" target="_blank" rel="noopener noreferrer" class="product-title-link">${p.title}</a>
+          </h3>
           <p class="product-card__snippet">${p.snippet}</p>
           <div class="product-card__price-row">
             <div class="product-card__price">${p.formattedPrice}</div>
@@ -570,75 +584,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // E. Interactive Before/After Split Comparison Sliders
-  const baVisuals = document.querySelectorAll('.ba-visual');
-  baVisuals.forEach(visual => {
-    const divider = visual.querySelector('.ba-divider');
-    const beforeHalf = visual.querySelector('.ba-half--before');
-    const beforeImg = beforeHalf ? beforeHalf.querySelector('img') : null;
+  // E. Calgary Showroom Real-Time Hours Status
+  function updateStoreHours() {
+    const storePill = document.getElementById('storeLiveStatusPill');
+    const storeText = document.getElementById('storeLiveStatusText');
+    const storeDot = document.getElementById('storeLiveDot');
+    const utilityText = document.getElementById('utilityStatusText');
+    const utilityDot = document.getElementById('utilityPulseDot');
+    const utilityPill = document.getElementById('utilityPulsePill');
 
-    function syncImageWidth() {
-      if (beforeImg) {
-        beforeImg.style.width = `${visual.offsetWidth}px`;
-      }
-    }
-    syncImageWidth();
-    window.addEventListener('resize', syncImageWidth);
+    if (!storeText && !utilityText) return;
 
-    let isDragging = false;
-
-    function updateSplit(clientX) {
-      const rect = visual.getBoundingClientRect();
-      let percent = ((clientX - rect.left) / rect.width) * 100;
-      percent = Math.max(5, Math.min(95, percent));
-      
-      divider.style.left = `${percent}%`;
-      beforeHalf.style.width = `${percent}%`;
+    let now = new Date();
+    try {
+      const calgaryStr = now.toLocaleString("en-US", { timeZone: "America/Edmonton" });
+      now = new Date(calgaryStr);
+    } catch (e) {
+      // fallback
     }
 
-    visual.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      updateSplit(e.clientX);
-    });
+    const day = now.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
+    const hour = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTimeVal = hour + minutes / 60;
 
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      updateSplit(e.clientX);
-    });
+    let isOpen = false;
+    let statusMsg = '';
+    let utilityMsg = '';
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    // Touch events for mobile phones and iPads
-    visual.addEventListener('touchstart', (e) => {
-      if (e.touches.length > 0) updateSplit(e.touches[0].clientX);
-    }, { passive: true });
-
-    visual.addEventListener('touchmove', (e) => {
-      if (e.touches.length > 0) updateSplit(e.touches[0].clientX);
-    }, { passive: true });
-  });
-
-  // F. Interactive Video Player Simulation
-  const videoBox = document.getElementById('videoBox');
-  if (videoBox) {
-    videoBox.addEventListener('click', () => {
-      const isPlaying = videoBox.classList.toggle('playing');
-      const progressBar = videoBox.querySelector('.video-progress__bar');
-      const timeDisplay = videoBox.querySelector('.video-time');
-
-      if (isPlaying) {
-        progressBar.style.transition = 'width 21s linear';
-        progressBar.style.width = '100%';
-        timeDisplay.textContent = '0:14 / 0:21';
+    if (day === 0) {
+      isOpen = false;
+      statusMsg = 'Closed Today · Opens Monday at 8:00 am';
+      utilityMsg = 'Calgary Showroom: Closed Sunday · Opens Monday 8am';
+    } else if (day === 6) {
+      if (currentTimeVal < 10) {
+        isOpen = false;
+        statusMsg = 'Closed · Opens Today at 10:00 am';
+        utilityMsg = 'Calgary Showroom: Opens Today at 10am';
+      } else if (currentTimeVal < 17) {
+        isOpen = true;
+        statusMsg = 'Open Today until 5:00 pm';
+        utilityMsg = 'Calgary Showroom: Open Today until 5pm';
       } else {
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '25%';
-        timeDisplay.textContent = '0:00 / 0:21';
+        isOpen = false;
+        statusMsg = 'Closed · Opens Monday at 8:00 am';
+        utilityMsg = 'Calgary Showroom: Closed · Opens Monday 8am';
       }
-    });
+    } else {
+      if (currentTimeVal < 8) {
+        isOpen = false;
+        statusMsg = 'Closed · Opens Today at 8:00 am';
+        utilityMsg = 'Calgary Showroom: Opens Today at 8am';
+      } else if (currentTimeVal < 18) {
+        isOpen = true;
+        statusMsg = 'Open Today until 6:00 pm';
+        utilityMsg = 'Calgary Showroom: Open Today until 6pm';
+      } else {
+        isOpen = false;
+        if (day === 5) {
+          statusMsg = 'Closed · Opens Saturday at 10:00 am';
+          utilityMsg = 'Calgary Showroom: Closed · Opens Saturday 10am';
+        } else {
+          statusMsg = 'Closed · Opens Tomorrow at 8:00 am';
+          utilityMsg = 'Calgary Showroom: Closed · Opens Tomorrow 8am';
+        }
+      }
+    }
+
+    if (storeText) storeText.textContent = statusMsg;
+    if (utilityText) utilityText.textContent = utilityMsg;
+
+    if (storePill) storePill.classList.toggle('is-closed', !isOpen);
+    if (storeDot) storeDot.classList.toggle('closed', !isOpen);
+    if (utilityDot) utilityDot.classList.toggle('closed', !isOpen);
+    if (utilityPill) utilityPill.classList.toggle('is-closed', !isOpen);
   }
+
+  updateStoreHours();
+  setInterval(updateStoreHours, 60000);
 
   // G. Mobile Menu Toggle
   const mobileBtn = document.getElementById('mobileMenuBtn');
@@ -684,7 +707,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial bindings
   bindAddToCartButtons();
   bindWishlistButtons();
+  startOfferRotation();
 });
+
+// ==========================================================================
+// TOPBAR OFFER CAROUSEL CONTROLS
+// ==========================================================================
+let currentOfferIdx = 0;
+let offerInterval = null;
+
+function renderOfferSlide(idx) {
+  const slides = document.querySelectorAll('.offer-slide');
+  if (!slides || slides.length === 0) return;
+  if (idx < 0) idx = slides.length - 1;
+  if (idx >= slides.length) idx = 0;
+  currentOfferIdx = idx;
+
+  slides.forEach((slide, i) => {
+    if (i === currentOfferIdx) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
+
+window.nextOffer = function() {
+  renderOfferSlide(currentOfferIdx + 1);
+  startOfferRotation();
+};
+
+window.prevOffer = function() {
+  renderOfferSlide(currentOfferIdx - 1);
+  startOfferRotation();
+};
+
+function startOfferRotation() {
+  if (offerInterval) clearInterval(offerInterval);
+  offerInterval = setInterval(() => {
+    renderOfferSlide(currentOfferIdx + 1);
+  }, 4500);
+}
 
 // Commercial Janitorial Quote Submission Feedback
 window.handleJanitorialSubmit = function(form) {
